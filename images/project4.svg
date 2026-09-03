@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="p4Bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#022c22" />
+      <stop offset="100%" stop-color="#064e3b" />
+    </linearGradient>
+    <linearGradient id="ecgGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+  </defs>
+
+  <!-- Container -->
+  <rect width="600" height="360" rx="12" fill="url(#p4Bg)"/>
+
+  <!-- Title Bar -->
+  <rect width="600" height="38" rx="12" fill="#021f18"/>
+  <rect y="26" width="600" height="12" fill="#021f18"/>
+  <circle cx="24" cy="19" r="6" fill="#ef4444"/>
+  <circle cx="44" cy="19" r="6" fill="#f59e0b"/>
+  <circle cx="64" cy="19" r="6" fill="#10b981"/>
+  <text x="120" y="24" font-family="'JetBrains Mono', monospace" font-size="11" fill="#6ee7b7">HealthPulse · Continuous IoT Biometric Telemetry</text>
+
+  <!-- 3 Top Metric Cards -->
+  <rect x="24" y="56" width="168" height="80" rx="8" fill="#065f46" stroke="#047857" stroke-width="1"/>
+  <text x="40" y="78" font-family="'Inter', sans-serif" font-size="11" fill="#a7f3d0">Resting Heart Rate</text>
+  <text x="40" y="108" font-family="'Inter', sans-serif" font-size="22" font-weight="bold" fill="#ffffff">64 <tspan font-size="13" font-weight="normal" fill="#a7f3d0">BPM</tspan></text>
+  <circle cx="160" cy="98" r="8" fill="#ef4444"/>
+  <path d="M156 98 L164 98 M160 94 L160 102" stroke="#ffffff" stroke-width="2"/>
+
+  <rect x="216" y="56" width="168" height="80" rx="8" fill="#065f46" stroke="#047857" stroke-width="1"/>
+  <text x="232" y="78" font-family="'Inter', sans-serif" font-size="11" fill="#a7f3d0">Blood Oxygen (SpO2)</text>
+  <text x="232" y="108" font-family="'Inter', sans-serif" font-size="22" font-weight="bold" fill="#ffffff">99% <tspan font-size="12" font-weight="normal" fill="#34d399">Normal</tspan></text>
+
+  <rect x="408" y="56" width="168" height="80" rx="8" fill="#065f46" stroke="#047857" stroke-width="1"/>
+  <text x="424" y="78" font-family="'Inter', sans-serif" font-size="11" fill="#a7f3d0">Daily Caloric Burn</text>
+  <text x="424" y="108" font-family="'Inter', sans-serif" font-size="22" font-weight="bold" fill="#ffffff">2,480 <tspan font-size="13" font-weight="normal" fill="#a7f3d0">kcal</tspan></text>
+
+  <!-- Real-Time ECG Waveform Monitor -->
+  <rect x="24" y="152" width="552" height="180" rx="8" fill="#022c22" stroke="#047857" stroke-width="1"/>
+  <text x="44" y="180" font-family="'Inter', sans-serif" font-size="13" font-weight="600" fill="#a7f3d0">Live Cardiac Rhythm (BLE 5.2 Stream · 250Hz)</text>
+
+  <!-- ECG Grid Lines -->
+  <line x1="24" y1="210" x2="576" y2="210" stroke="#064e3b" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="24" y1="250" x2="576" y2="250" stroke="#064e3b" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="24" y1="290" x2="576" y2="290" stroke="#064e3b" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- ECG Waveform Path -->
+  <path d="M 44 250 L 100 250 L 110 238 L 120 250 L 135 250 L 145 200 L 155 295 L 165 240 L 175 255 L 185 250 L 250 250 L 260 238 L 270 250 L 285 250 L 295 200 L 305 295 L 315 240 L 325 255 L 335 250 L 400 250 L 410 238 L 420 250 L 435 250 L 445 200 L 455 295 L 465 240 L 475 255 L 485 250 L 550 250" fill="none" stroke="url(#ecgGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Live Pulse Dot -->
+  <circle cx="550" cy="250" r="5" fill="#34d399"/>
+  <circle cx="550" cy="250" r="10" fill="none" stroke="#34d399" opacity="0.6"/>
+</svg>

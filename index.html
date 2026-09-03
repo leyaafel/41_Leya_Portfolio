@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Leya Felix — Computer Science Undergraduate, Full-Stack Developer, and Machine Learning Enthusiast specializing in database-driven systems and intelligent applications." />
+  <meta name="author" content="Leya Felix" />
+  <title>Leya Felix | Computer Science &amp; Software Developer Portfolio</title>
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet (A9, A10) -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ========================================================================
+       A1, A2: HEADER & NAVIGATION (<header>, <nav>)
+       ======================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <!-- Name & Brand Logo -->
+      <a href="#hero" class="brand-logo" aria-label="Leya Felix Portfolio Home">
+        <span class="logo-accent">&lt;</span>Leya<span class="logo-dot">.dev</span><span class="logo-accent">/&gt;</span>
+      </a>
+
+      <!-- Primary Navigation Menu (A1, A2) -->
+      <nav class="primary-nav" id="primary-nav" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#experience" class="nav-link">Internship &amp; Education</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Controls: Theme Toggle & Mobile Menu -->
+      <div class="header-actions">
+        <!-- B2, B4: Dark/Light Mode Switcher -->
+        <button 
+          type="button" 
+          id="theme-toggle" 
+          class="btn-theme-toggle" 
+          aria-label="Switch between dark and light themes"
+        >
+          <span id="theme-icon" aria-hidden="true">☀️</span>
+          <span id="theme-text">Light Mode</span>
+        </button>
+
+        <!-- B2: Mobile Hamburger Navigation Toggle -->
+        <button 
+          type="button" 
+          id="mobile-menu-btn" 
+          class="btn-mobile-menu" 
+          aria-expanded="false" 
+          aria-controls="primary-nav" 
+          aria-label="Toggle navigation menu"
+        >
+          <span class="hamburger-icon" aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       MAIN CONTENT CONTAINER (<main>)
+       ======================================================================== -->
+  <main id="main-content">
+
+    <!-- ======================================================================
+         A1, A8: HERO / BANNER SECTION (<section>)
+         ====================================================================== -->
+    <section class="hero-section" id="hero" aria-label="Introduction Banner">
+      <div class="container hero-grid">
+        <!-- Hero Text & CTAs -->
+        <div class="hero-content">
+          <div class="hero-status-pill">
+            <span class="status-dot"></span>
+            <span>Available for Software Engineering Roles &amp; Internships</span>
+          </div>
+
+          <h1 class="hero-headline">
+            Building Intelligent <span class="hero-gradient-text">Software Systems</span> &amp; Modern Web Solutions.
+          </h1>
+
+          <p class="hero-tagline">
+            Hi, I’m <strong>Leya Felix</strong> — a Computer Science undergraduate with hands-on experience in full-stack development, machine learning, and database-driven applications. Eager to bring technical curiosity and problem-solving to high-impact software teams.
+          </p>
+
+          <!-- Call-to-action buttons (A6 internal links) -->
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              Explore Projects 🚀
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              Get in Touch ✉️
+            </a>
+            <a href="assets/docs/resume.pdf" class="btn btn-outline" download="Leya_Felix_Resume.pdf">
+              Download Resume 📄
+            </a>
+          </div>
+
+          <!-- A8: Audio Introduction Greeting -->
+          <aside class="hero-audio-widget" aria-label="Audio Welcome Greeting">
+            <span class="audio-widget-label">
+              <span>🔊</span> <strong>Audio Welcome Chime:</strong>
+            </span>
+            <audio controls class="hero-audio-player" preload="metadata">
+              <source src="assets/audio/welcome.wav" type="audio/wav" />
+              Your browser does not support the audio element.
+            </audio>
+          </aside>
+        </div>
+
+        <!-- Hero Avatar Visual (A8 Embedded Image) -->
+        <div class="hero-visual">
+          <div class="avatar-wrapper">
+            <img 
+              src="assets/images/profile.svg" 
+              alt="Vector portrait of Leya Felix, Computer Science developer" 
+              class="profile-avatar-img"
+              width="320" 
+              height="320"
+              fetchpriority="high"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         A2, A3: ABOUT ME SECTION (<section>, <article>, <aside>)
+         ====================================================================== -->
+    <section class="about-section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">About Leya Felix</span>
+          <h2 id="about-title" class="section-title">About Me</h2>
+          <p class="section-subtitle">Academic excellence, practical industry engineering, and a passion for machine learning and full-stack systems.</p>
+        </header>
+
+        <div class="about-grid">
+          <!-- Main Narrative Article (A2) -->
+          <article class="about-main-card">
+            <p class="about-paragraph">
+              I am a Computer Science undergraduate at <strong>Mar Baselios College of Engineering and Technology, Thiruvananthapuram</strong> (maintaining a <strong>9.24 CGPA</strong>). My technical background centers on building real-world software applications, ranging from machine learning pipelines for medical diagnosis to scalable full-stack MERN platforms and enterprise database applications.
+            </p>
+            <p class="about-paragraph">
+              During my internship at <strong>Oil Fields Supply Center Ltd., Jebel Ali</strong>, I developed web-based applications using Oracle Database, engineered sales analytics modules with optimized data queries, and created interactive Power BI dashboards that enabled faster decision-making for executive operations teams.
+            </p>
+            <p class="about-paragraph">
+              Beyond engineering, I serve as the <strong>Documentation Coordinator at OpenLabsAI</strong>, qualified in the screening round of the prestigious <strong>Smart India Hackathon (SIH) 2025</strong>, and actively participate in extracurricular passions including Volleyball, Bharatanatyam Dance, and Karate.
+            </p>
+
+            <div class="about-highlights-grid">
+              <div class="highlight-box">
+                <h4 class="highlight-title">🧠 Machine Learning &amp; AI</h4>
+                <p class="highlight-desc">Acoustic voice analysis combining CNNs &amp; XGBoost achieving 94.7% ROC-AUC and 89.4% recall.</p>
+              </div>
+              <div class="highlight-box">
+                <h4 class="highlight-title">⚡ Full-Stack &amp; Databases</h4>
+                <p class="highlight-desc">Hands-on with MERN stack, REST APIs, JWT authentication, Oracle Database, MySQL, and MongoDB.</p>
+              </div>
+              <div class="highlight-box">
+                <h4 class="highlight-title">📊 Analytics &amp; Cloud</h4>
+                <p class="highlight-desc">Power BI dashboarding and certified in Oracle Cloud Infrastructure (OCI) Foundations.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Aside Quick Facts (A2 Semantic <aside>) -->
+          <aside class="about-aside-sidebar" aria-label="Quick Highlights">
+            <h3 class="sidebar-heading"><span>⚡</span> Quick Facts</h3>
+            <ul class="quick-facts-list">
+              <li class="quick-fact-item">
+                <span class="fact-icon" aria-hidden="true">🎓</span>
+                <div class="fact-content">
+                  <strong>Academic Profile</strong>
+                  <span>B.Tech in CSE · CGPA: 9.24</span>
+                </div>
+              </li>
+              <li class="quick-fact-item">
+                <span class="fact-icon" aria-hidden="true">🏫</span>
+                <div class="fact-content">
+                  <strong>Alma Mater</strong>
+                  <span>Mar Baselios CET / Gems Dubai</span>
+                </div>
+              </li>
+              <li class="quick-fact-item">
+                <span class="fact-icon" aria-hidden="true">💼</span>
+                <div class="fact-content">
+                  <strong>Industry Experience</strong>
+                  <span>Oil Fields Supply Center Ltd.</span>
+                </div>
+              </li>
+              <li class="quick-fact-item">
+                <span class="fact-icon" aria-hidden="true">🌐</span>
+                <div class="fact-content">
+                  <strong>Languages Known</strong>
+                  <span>English, Malayalam</span>
+                </div>
+              </li>
+              <li class="quick-fact-item">
+                <span class="fact-icon" aria-hidden="true">🤝</span>
+                <div class="fact-content">
+                  <strong>Responsibility</strong>
+                  <span>Documentation Coordinator · OpenLabsAI</span>
+                </div>
+              </li>
+              <li class="quick-fact-item">
+                <span class="fact-icon" aria-hidden="true">🥋</span>
+                <div class="fact-content">
+                  <strong>Activities</strong>
+                  <span>Bharatanatyam, Volleyball, Karate</span>
+                </div>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         A3, A4: SKILLS SECTION (dl, ul, ol Lists)
+         ====================================================================== -->
+    <section class="skills-section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">Competencies</span>
+          <h2 id="skills-title" class="section-title">Technical Skills &amp; Growth</h2>
+          <p class="section-subtitle">Proficiencies categorized by discipline, developer toolkit, and sequential learning milestones.</p>
+        </header>
+
+        <div class="skills-layout-grid">
+          <!-- A4: Description List (<dl>) for Technical Skills (Exact Resume Data) -->
+          <article class="skills-card">
+            <header class="skills-card-header">
+              <h3 class="skills-card-title"><span>💻</span> Technical Skills</h3>
+              <p class="skills-card-desc">Core competencies, programming languages, and databases from verified resume.</p>
+            </header>
+
+            <dl class="proficiency-dl">
+              <div class="proficiency-item">
+                <dt class="proficiency-dt">
+                  <span>🐍 Programming Languages</span>
+                </dt>
+                <dd class="proficiency-dd">Python, C Programming, Java</dd>
+              </div>
+
+              <div class="proficiency-item">
+                <dt class="proficiency-dt">
+                  <span>🗄️ Database Management Systems</span>
+                </dt>
+                <dd class="proficiency-dd">Oracle Database, MySQL, MongoDB</dd>
+              </div>
+
+              <div class="proficiency-item">
+                <dt class="proficiency-dt">
+                  <span>📊 Data Science &amp; Analytics</span>
+                </dt>
+                <dd class="proficiency-dd">Pandas, NumPy, Power BI</dd>
+              </div>
+
+              <div class="proficiency-item">
+                <dt class="proficiency-dt">
+                  <span>🛠️ Development Tools &amp; Frameworks</span>
+                </dt>
+                <dd class="proficiency-dd">Flutter, Autodesk Inventor, Microsoft Office</dd>
+              </div>
+            </dl>
+          </article>
+
+          <!-- A4: Unordered List (<ul>) for Academic Coursework (Exact Resume Data) -->
+          <article class="skills-card">
+            <header class="skills-card-header">
+              <h3 class="skills-card-title"><span>📚</span> Core Computer Science Courses</h3>
+              <p class="skills-card-desc">Academic undergraduate coursework completed at Mar Baselios CET.</p>
+            </header>
+
+            <ul class="tools-ul">
+              <li class="tool-item">
+                <span aria-hidden="true">🔹</span>
+                <span>Object-Oriented Programming (OOP)</span>
+              </li>
+              <li class="tool-item">
+                <span aria-hidden="true">🔹</span>
+                <span>Design and Analysis of Algorithms</span>
+              </li>
+              <li class="tool-item">
+                <span aria-hidden="true">🔹</span>
+                <span>Data Structures and Algorithms</span>
+              </li>
+              <li class="tool-item">
+                <span aria-hidden="true">🔹</span>
+                <span>Computer Networks</span>
+              </li>
+              <li class="tool-item">
+                <span aria-hidden="true">🔹</span>
+                <span>Database Management Systems (DBMS)</span>
+              </li>
+              <li class="tool-item">
+                <span aria-hidden="true">🔹</span>
+                <span>Computer Organization &amp; Architecture</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         A3, A6, B1, B2, B4: PROJECTS SECTION (Dynamic Cards Rendered via JS)
+         ====================================================================== -->
+    <section class="projects-section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">Portfolio Showcase</span>
+          <h2 id="projects-title" class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">Dynamic project cards rendered via JavaScript from Leya's resume with category filtering and modal specs.</p>
+        </header>
+
+        <!-- B2: Interactive Filter Controls -->
+        <div class="projects-controls">
+          <div class="filter-btn-group" role="tablist" aria-label="Filter projects by technology category">
+            <button type="button" class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Projects</button>
+            <button type="button" class="filter-btn" data-filter="ml" role="tab" aria-selected="false">Machine Learning &amp; AI</button>
+            <button type="button" class="filter-btn" data-filter="fullstack" role="tab" aria-selected="false">Full Stack (MERN)</button>
+            <button type="button" class="filter-btn" data-filter="enterprise" role="tab" aria-selected="false">Java &amp; Enterprise</button>
+            <button type="button" class="filter-btn" data-filter="accessibility" role="tab" aria-selected="false">Accessibility &amp; Mobile</button>
+          </div>
+
+          <!-- B4: Persistent LocalStorage Favorites Filter -->
+          <button 
+            type="button" 
+            id="filter-fav-toggle" 
+            class="favorites-filter-toggle"
+            aria-pressed="false"
+          >
+            <span>★ Favorites Only</span>
+            <span id="favorites-count">(0)</span>
+          </button>
+        </div>
+
+        <div class="projects-status-bar">
+          <span id="projects-count" aria-live="polite">Loading projects...</span>
+          <span class="projects-note">Click "Details &amp; Architecture" to view technical metrics.</span>
+        </div>
+
+        <!-- B1: Empty container dynamically populated by js/main.js from js/projects-data.js -->
+        <div class="projects-grid" id="projects-grid" aria-live="polite">
+          <noscript>
+            <p>Please enable JavaScript to view the dynamic project showcase.</p>
+          </noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         A3, A5: INTERNSHIP & EDUCATION SECTION (Tabular Format <table>)
+         ====================================================================== -->
+    <section class="experience-section" id="experience" aria-labelledby="exp-title">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">Track Record</span>
+          <h2 id="exp-title" class="section-title">Internship &amp; Education</h2>
+          <p class="section-subtitle">Verified academic qualifications and industry software development internship history presented in tabular format.</p>
+        </header>
+
+        <div class="history-tables-wrapper">
+          <!-- A5: Internship Table (Semantic <table>) -->
+          <article class="table-card">
+            <header class="table-card-header">
+              <h3 class="table-card-title"><span>💼</span> Professional Internship Experience</h3>
+              <p class="table-card-subtitle">Hands-on software development role completed at Oil Fields Supply Center Ltd.</p>
+            </header>
+
+            <div class="table-responsive-container">
+              <table class="history-table" aria-label="Internship History Table">
+                <caption>Professional Software Engineering Internships</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Organisation</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">Duration</th>
+                    <th scope="col">Key Contributions &amp; Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="cell-primary">
+                      <strong>Oil Fields Supply Center Ltd.</strong><br />
+                      <span class="cell-tag">Jebel Ali, UAE</span>
+                    </td>
+                    <td>Software Development Intern</td>
+                    <td class="duration-text">Dec 2024 – Dec 2024</td>
+                    <td>
+                      • Developed and tested web-based applications using <strong>Oracle Database</strong>, contributing to core backend functionality within a team environment.<br />
+                      • Built a sales analytics module in Oracle, designing queries and data pipelines to surface actionable insights for stakeholders.<br />
+                      • Created interactive <strong>Power BI dashboards</strong> to visualize sales data, enabling faster decision-making for the operations team.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <!-- A5: Education Table (Semantic <table>) -->
+          <article class="table-card">
+            <header class="table-card-header">
+              <h3 class="table-card-title"><span>🎓</span> Academic Qualifications</h3>
+              <p class="table-card-subtitle">Formal education, degrees, and academic performance from university and high school.</p>
+            </header>
+
+            <div class="table-responsive-container">
+              <table class="history-table" aria-label="Education History Table">
+                <caption>Academic Qualifications and Degrees</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Institution</th>
+                    <th scope="col">Degree / Program</th>
+                    <th scope="col">Duration</th>
+                    <th scope="col">Grade &amp; Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="cell-primary">
+                      <strong>Mar Baselios College of Engineering and Technology</strong><br />
+                      <span class="cell-tag">Thiruvananthapuram, India</span>
+                    </td>
+                    <td>B.Tech, Computer Science and Engineering</td>
+                    <td class="duration-text">2023 – 2027</td>
+                    <td>
+                      <strong>CGPA: 9.24 / 10.0</strong><br />
+                      Coursework: OOP, Design and Analysis of Algorithms, Data Structures, Computer Networks, DBMS, Computer Organization and Architecture.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="cell-primary">
+                      <strong>Gems Our Own Indian School</strong><br />
+                      <span class="cell-tag">Dubai, UAE</span>
+                    </td>
+                    <td>Class XII (CBSE Board)</td>
+                    <td class="duration-text">2021 – 2023</td>
+                    <td>
+                      <strong>Score: 90%</strong><br />
+                      Senior Secondary education focusing on Mathematics, Physics, Chemistry, and Computer Science.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="cell-primary">
+                      <strong>Gems Our Own Indian School</strong><br />
+                      <span class="cell-tag">Dubai, UAE</span>
+                    </td>
+                    <td>Class X (CBSE Board)</td>
+                    <td class="duration-text">2019 – 2021</td>
+                    <td>
+                      <strong>Score: 92%</strong><br />
+                      Secondary School Examination with distinction.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <!-- Certifications & Hackathons Card -->
+          <article class="table-card">
+            <header class="table-card-header">
+              <h3 class="table-card-title"><span>🏆</span> Certifications &amp; Hackathons</h3>
+              <p class="table-card-subtitle">Recognitions, technical certifications, and national competition milestones.</p>
+            </header>
+
+            <ol class="about-highlights-grid" style="list-style-position: inside;">
+              <li class="highlight-box">
+                <h4 class="highlight-title">🇮🇳 Smart India Hackathon 2025</h4>
+                <p class="highlight-desc">Qualified in institution-level screening round of SIH. Collaborated in team to design and present an innovative solution addressing real-world problem.</p>
+              </li>
+              <li class="highlight-box">
+                <h4 class="highlight-title">☁️ Oracle Cloud Infrastructure Foundations</h4>
+                <p class="highlight-desc">Certified in Oracle Cloud Infrastructure (OCI) Foundations by Coursera.</p>
+              </li>
+              <li class="highlight-box">
+                <h4 class="highlight-title">📊 From Excel to Power BI</h4>
+                <p class="highlight-desc">Advanced data analytics and dashboard engineering certification by Knowledge Accelerators.</p>
+              </li>
+              <li class="highlight-box">
+                <h4 class="highlight-title">💼 IBM SkillsBuild</h4>
+                <p class="highlight-desc">Participated in technical skills and industry training program organized by CSRBOX (June 2025).</p>
+              </li>
+            </ol>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         A3, A7, B3: CONTACT SECTION & FORM
+         ====================================================================== -->
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">Get in Touch</span>
+          <h2 id="contact-title" class="section-title">Contact Me</h2>
+          <p class="section-subtitle">Interested in collaborating or discussing engineering opportunities? Reach out directly or submit a message below.</p>
+        </header>
+
+        <div class="contact-grid">
+          <!-- A7: Direct Contact Info Card (mailto, tel, downloadable resume) -->
+          <article class="contact-info-card">
+            <h3 class="sidebar-heading"><span>📫</span> Direct Reach</h3>
+            <p class="about-paragraph">
+              Feel free to call, send an email, or connect with me on LinkedIn. I am always open to discussing new software development roles and internships.
+            </p>
+
+            <div class="contact-direct-links">
+              <!-- A7: Working mailto: link -->
+              <a href="mailto:leyafelix13@gmail.com" class="contact-link-item" title="Send email to Leya Felix">
+                <span class="contact-item-icon" aria-hidden="true">✉️</span>
+                <div>
+                  <strong>Email</strong><br />
+                  <span>leyafelix13@gmail.com</span>
+                </div>
+              </a>
+
+              <!-- A7: Working tel: link -->
+              <a href="tel:+917559022815" class="contact-link-item" title="Call Leya Felix">
+                <span class="contact-item-icon" aria-hidden="true">📞</span>
+                <div>
+                  <strong>Phone</strong><br />
+                  <span>+91 7559022815</span>
+                </div>
+              </a>
+
+              <!-- LinkedIn Link -->
+              <a href="https://www.linkedin.com/in/leya-felix-19034124a/" target="_blank" rel="noopener noreferrer" class="contact-link-item" title="Visit Leya Felix on LinkedIn">
+                <span class="contact-item-icon" aria-hidden="true">💼</span>
+                <div>
+                  <strong>LinkedIn Profile</strong><br />
+                  <span>linkedin.com/in/leya-felix-19034124a/ ↗</span>
+                </div>
+              </a>
+
+              <!-- Location Info -->
+              <div class="contact-link-item">
+                <span class="contact-item-icon" aria-hidden="true">📍</span>
+                <div>
+                  <strong>Location</strong><br />
+                  <span>Thiruvananthapuram, India / Dubai, UAE</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- A7: Downloadable Resume Link -->
+            <div class="resume-download-card">
+              <h4 class="resume-download-title">Verified Curriculum Vitae</h4>
+              <p class="resume-download-desc">Official PDF resume detailing academic achievements, internship at Oil Fields Supply Center, and project metrics.</p>
+              <a 
+                href="assets/docs/resume.pdf" 
+                class="btn btn-primary btn-block" 
+                download="Leya_Felix_Resume.pdf"
+                title="Download Leya Felix Resume PDF"
+              >
+                <span>Download Resume (PDF) 📄</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Resume / Curriculum Vitae Showcase Card (Replacing form per user request) -->
+          <article class="resume-showcase-card">
+            <h3 class="sidebar-heading"><span>📄</span> Curriculum Vitae (Resume)</h3>
+            <p class="about-paragraph">
+              Official verified resume of <strong>Leya Felix</strong> outlining academic performance (CGPA: 9.24 at Mar Baselios CET), software development internship at Oil Fields Supply Center Ltd. (Jebel Ali), core machine learning research, and full-stack projects.
+            </p>
+
+            <div class="resume-actions-group">
+              <a 
+                href="assets/docs/resume.pdf" 
+                class="btn btn-primary" 
+                download="Leya_Felix_Resume.pdf"
+                title="Download Leya Felix Official Resume PDF"
+              >
+                Download Resume (PDF) 📄
+              </a>
+              <a 
+                href="assets/docs/resume.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn btn-outline"
+                title="Open Leya Felix Resume in a new browser tab"
+              >
+                Open PDF in New Tab ↗
+              </a>
+            </div>
+
+            <!-- Embedded PDF Document Viewer -->
+            <iframe 
+              src="assets/docs/resume.pdf" 
+              class="resume-embed-frame" 
+              title="Leya Felix Official Resume PDF Document"
+            ></iframe>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       A2: FOOTER (<footer>)
+       ======================================================================== -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container footer-inner">
+      <!-- External Links (A6) -->
+      <nav class="footer-social-links" aria-label="Social Media and Repository Links">
+        <a href="https://www.linkedin.com/in/leya-felix-19034124a/" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn ↗</a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link">GitHub ↗</a>
+        <a href="mailto:leyafelix13@gmail.com" class="social-link">Email ✉️</a>
+        <a href="#hero" class="social-link">Back to Top ↑</a>
+      </nav>
+
+      <p class="footer-copy">
+        &copy; 2026 Leya Felix. Built with semantic HTML5, modern CSS3, and vanilla ES6+ JavaScript.
+      </p>
+      <p class="footer-note">
+        23CSB40B · Web Technology · Portfolio Assignment
+      </p>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       B2: PROJECT DETAILS MODAL / LIGHTBOX (<dialog>)
+       ======================================================================== -->
+  <dialog id="project-modal" class="project-modal" aria-labelledby="modal-title">
+    <div class="modal-header-bar">
+      <button type="button" id="modal-close-btn" class="modal-close-btn" aria-label="Close project details dialog">✕</button>
+    </div>
+    <div class="modal-body" id="modal-body-content">
+      <!-- Injected dynamically via JS on open -->
+    </div>
+  </dialog>
+  <div id="modal-backdrop" class="modal-backdrop-fallback"></div>
+
+  <!-- ========================================================================
+       A9, B2: FIXED SCROLL-TO-TOP BUTTON
+       ======================================================================== -->
+  <button 
+    type="button" 
+    id="scroll-top-btn" 
+    class="btn-scroll-top" 
+    aria-label="Scroll smoothly back to top" 
+    title="Back to Top"
+  >
+    ↑
+  </button>
+
+  <!-- ========================================================================
+       SCRIPTS (B1, B5)
+       ======================================================================== -->
+  <script src="js/projects-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

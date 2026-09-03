@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="p3Bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1e2e" />
+      <stop offset="100%" stop-color="#181825" />
+    </linearGradient>
+  </defs>
+
+  <!-- IDE Window -->
+  <rect width="600" height="360" rx="12" fill="url(#p3Bg)"/>
+
+  <!-- Title Bar -->
+  <rect width="600" height="38" rx="12" fill="#11111b"/>
+  <rect y="26" width="600" height="12" fill="#11111b"/>
+  <circle cx="24" cy="19" r="6" fill="#f38ba8"/>
+  <circle cx="44" cy="19" r="6" fill="#f9e2af"/>
+  <circle cx="64" cy="19" r="6" fill="#a6e3a1"/>
+  <text x="120" y="24" font-family="'JetBrains Mono', monospace" font-size="11" fill="#cdd6f4">DevSync IDE — server.ts (3 active collaborators)</text>
+
+  <!-- Collaborator Avatars in Titlebar -->
+  <circle cx="510" cy="19" r="11" fill="#89b4fa"/>
+  <text x="510" y="23" font-family="'Inter', sans-serif" font-size="10" font-weight="bold" fill="#11111b" text-anchor="middle">AM</text>
+  <circle cx="536" cy="19" r="11" fill="#a6e3a1"/>
+  <text x="536" y="23" font-family="'Inter', sans-serif" font-size="10" font-weight="bold" fill="#11111b" text-anchor="middle">SK</text>
+  <circle cx="562" cy="19" r="11" fill="#f5c2e7"/>
+  <text x="562" y="23" font-family="'Inter', sans-serif" font-size="10" font-weight="bold" fill="#11111b" text-anchor="middle">ER</text>
+
+  <!-- Left Sidebar (File Explorer) -->
+  <rect x="0" y="38" width="130" height="322" fill="#181825"/>
+  <text x="16" y="62" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#6c7086">EXPLORER</text>
+  <text x="16" y="86" font-family="'JetBrains Mono', monospace" font-size="11" fill="#89b4fa">▾ src</text>
+  <text x="28" y="106" font-family="'JetBrains Mono', monospace" font-size="11" fill="#cdd6f4">  server.ts</text>
+  <text x="28" y="126" font-family="'JetBrains Mono', monospace" font-size="11" fill="#6c7086">  socket.ts</text>
+  <text x="28" y="146" font-family="'JetBrains Mono', monospace" font-size="11" fill="#6c7086">  auth.ts</text>
+  <text x="16" y="168" font-family="'JetBrains Mono', monospace" font-size="11" fill="#89b4fa">▸ tests</text>
+  <text x="16" y="190" font-family="'JetBrains Mono', monospace" font-size="11" fill="#fab387">  package.json</text>
+
+  <!-- Editor Code Area -->
+  <rect x="130" y="38" width="470" height="230" fill="#1e1e2e"/>
+  <!-- Active Tab -->
+  <rect x="130" y="38" width="140" height="28" fill="#1e1e2e"/>
+  <text x="146" y="56" font-family="'JetBrains Mono', monospace" font-size="11" fill="#cdd6f4">server.ts ✕</text>
+
+  <!-- Code Line Numbers -->
+  <text x="146" y="90" font-family="'JetBrains Mono', monospace" font-size="11" fill="#585b70">1</text>
+  <text x="146" y="112" font-family="'JetBrains Mono', monospace" font-size="11" fill="#585b70">2</text>
+  <text x="146" y="134" font-family="'JetBrains Mono', monospace" font-size="11" fill="#585b70">3</text>
+  <text x="146" y="156" font-family="'JetBrains Mono', monospace" font-size="11" fill="#585b70">4</text>
+  <text x="146" y="178" font-family="'JetBrains Mono', monospace" font-size="11" fill="#585b70">5</text>
+  <text x="146" y="200" font-family="'JetBrains Mono', monospace" font-size="11" fill="#585b70">6</text>
+  <text x="146" y="222" font-family="'JetBrains Mono', monospace" font-size="11" fill="#585b70">7</text>
+
+  <!-- Code Syntax Highlighting -->
+  <text x="175" y="90" font-family="'JetBrains Mono', monospace" font-size="11">
+    <tspan fill="#cba6f7">import</tspan> <tspan fill="#cdd6f4">{ WebSocketServer } </tspan><tspan fill="#cba6f7">from</tspan> <tspan fill="#a6e3a1">'ws'</tspan><tspan fill="#cdd6f4">;</tspan>
+  </text>
+  <text x="175" y="112" font-family="'JetBrains Mono', monospace" font-size="11">
+    <tspan fill="#cba6f7">import</tspan> <tspan fill="#cdd6f4">{ CRDTDocument } </tspan><tspan fill="#cba6f7">from</tspan> <tspan fill="#a6e3a1">'./crdt'</tspan><tspan fill="#cdd6f4">;</tspan>
+  </text>
+  <text x="175" y="134" font-family="'JetBrains Mono', monospace" font-size="11">
+    <tspan fill="#cba6f7">const</tspan> <tspan fill="#89b4fa">wss</tspan> = <tspan fill="#cba6f7">new</tspan> <tspan fill="#f9e2af">WebSocketServer</tspan><tspan fill="#cdd6f4">({ port: </tspan><tspan fill="#fab387">8080</tspan><tspan fill="#cdd6f4"> });</tspan>
+  </text>
+  <text x="175" y="156" font-family="'JetBrains Mono', monospace" font-size="11">
+    <tspan fill="#89b4fa">wss</tspan><tspan fill="#cdd6f4">.</tspan><tspan fill="#89dceb">on</tspan><tspan fill="#cdd6f4">(</tspan><tspan fill="#a6e3a1">'connection'</tspan><tspan fill="#cdd6f4">, (</tspan><tspan fill="#fab387">socket</tspan><tspan fill="#cdd6f4">) =&gt; {</tspan>
+  </text>
+  <text x="195" y="178" font-family="'JetBrains Mono', monospace" font-size="11">
+    <tspan fill="#89b4fa">broadcastUpdate</tspan><tspan fill="#cdd6f4">(</tspan><tspan fill="#fab387">socket</tspan><tspan fill="#cdd6f4">, doc.</tspan><tspan fill="#89dceb">getState</tspan><tspan fill="#cdd6f4">());</tspan>
+  </text>
+  <text x="175" y="200" font-family="'JetBrains Mono', monospace" font-size="11">
+    <tspan fill="#cdd6f4">});</tspan>
+  </text>
+  <text x="175" y="222" font-family="'JetBrains Mono', monospace" font-size="11">
+    <tspan fill="#585b70">// Synced live across 3 nodes with 0-conflict resolution</tspan>
+  </text>
+
+  <!-- Live Cursor Flag -->
+  <rect x="365" y="165" width="2" height="15" fill="#f38ba8"/>
+  <rect x="365" y="152" width="24" height="14" rx="3" fill="#f38ba8"/>
+  <text x="370" y="162" font-family="'Inter', sans-serif" font-size="9" font-weight="bold" fill="#11111b">ER</text>
+
+  <!-- Integrated Terminal Panel -->
+  <rect x="130" y="268" width="470" height="92" fill="#11111b"/>
+  <rect x="130" y="268" width="470" height="20" fill="#181825"/>
+  <text x="146" y="282" font-family="'Inter', sans-serif" font-size="10" font-weight="bold" fill="#a6adc8">TERMINAL — zsh</text>
+  <text x="146" y="306" font-family="'JetBrains Mono', monospace" font-size="10" fill="#a6e3a1">➜  devsync git:(main) yarn test:crdt</text>
+  <text x="146" y="324" font-family="'JetBrains Mono', monospace" font-size="10" fill="#89b4fa">✔ 48 tests passed (0 conflicts detected, latency 8ms)</text>
+  <text x="146" y="342" font-family="'JetBrains Mono', monospace" font-size="10" fill="#cdd6f4">➜  devsync git:(main) █</text>
+</svg>

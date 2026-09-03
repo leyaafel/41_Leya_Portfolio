@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGradLeya" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="50%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0ea5e9" />
+    </linearGradient>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fed7aa" />
+      <stop offset="100%" stop-color="#fbcfe8" />
+    </linearGradient>
+    <linearGradient id="hairGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#18181b" />
+      <stop offset="100%" stop-color="#09090b" />
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Circle -->
+  <circle cx="200" cy="200" r="180" fill="url(#bgGradLeya)" filter="url(#softShadow)"/>
+
+  <!-- Subtle Tech Elements / Orbit rings -->
+  <circle cx="200" cy="200" r="162" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="2" stroke-dasharray="6,8"/>
+  <circle cx="200" cy="200" r="142" fill="rgba(15, 23, 42, 0.4)"/>
+
+  <!-- Code watermark tags -->
+  <text x="65" y="130" font-family="'JetBrains Mono', monospace" font-size="20" fill="rgba(255,255,255,0.3)" font-weight="bold">&lt;Leya.cs&gt;</text>
+  <text x="260" y="280" font-family="'JetBrains Mono', monospace" font-size="20" fill="rgba(255,255,255,0.3)" font-weight="bold">&lt;/AI_ML&gt;</text>
+
+  <!-- Shoulders & Dark Professional Top -->
+  <path d="M105 345 C110 275, 140 245, 200 245 C260 245, 290 275, 295 345 Z" fill="#18181b"/>
+  <!-- V-neck collar line -->
+  <path d="M178 245 L200 272 L222 245" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Neck -->
+  <rect x="184" y="208" width="32" height="42" rx="6" fill="url(#skinGrad)"/>
+
+  <!-- Head Base -->
+  <ellipse cx="200" cy="180" rx="52" ry="58" fill="url(#skinGrad)"/>
+
+  <!-- Facial Features -->
+  <!-- Eyebrows -->
+  <path d="M168 162 Q180 159 190 163" fill="none" stroke="#27272a" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M210 163 Q220 159 232 162" fill="none" stroke="#27272a" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Expressive Eyes -->
+  <ellipse cx="178" cy="172" rx="6" ry="6.5" fill="#18181b"/>
+  <circle cx="176" cy="170" r="2" fill="#ffffff"/>
+  <ellipse cx="222" cy="172" rx="6" ry="6.5" fill="#18181b"/>
+  <circle cx="220" cy="170" r="2" fill="#ffffff"/>
+  <!-- Delicate Eyelash Accent -->
+  <path d="M170 168 Q178 165 186 168" fill="none" stroke="#18181b" stroke-width="1.8"/>
+  <path d="M214 168 Q222 165 230 168" fill="none" stroke="#18181b" stroke-width="1.8"/>
+  <!-- Nose -->
+  <path d="M198 178 Q200 188 204 189" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round"/>
+  <!-- Warm Smile with Rosy Cheeks -->
+  <circle cx="166" cy="190" r="8" fill="#fda4af" opacity="0.45"/>
+  <circle cx="234" cy="190" r="8" fill="#fda4af" opacity="0.45"/>
+  <path d="M185 204 Q200 216 215 204" fill="none" stroke="#be123c" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Hair (Shoulder length, dark, parted elegantly matching Leya's photo) -->
+  <!-- Hair Behind / Flowing Down -->
+  <path d="M142 165 C132 205, 128 265, 142 300 C150 295, 155 270, 154 240 Z" fill="url(#hairGrad)"/>
+  <path d="M258 165 C268 205, 272 265, 258 300 C250 295, 245 270, 246 240 Z" fill="url(#hairGrad)"/>
+  <!-- Main Top Hair Volume -->
+  <path d="M142 165 C138 120, 168 105, 200 105 C232 105, 262 120, 258 165 C248 135, 225 130, 200 130 C175 130, 152 135, 142 165 Z" fill="url(#hairGrad)"/>
+  <!-- Hair Strands Front Sides -->
+  <path d="M145 155 C152 185, 158 220, 164 240 C156 220, 148 190, 144 165 Z" fill="#27272a"/>
+  <path d="M255 155 C248 185, 242 220, 236 240 C244 220, 252 190, 256 165 Z" fill="#27272a"/>
+
+  <!-- Available for Work Status Badge -->
+  <g transform="translate(290, 280)">
+    <circle cx="0" cy="0" r="22" fill="#0f172a" stroke="#1e293b" stroke-width="3"/>
+    <circle cx="0" cy="0" r="14" fill="#10b981"/>
+    <circle cx="0" cy="0" r="7" fill="#ffffff" opacity="0.9"/>
+  </g>
+</svg>

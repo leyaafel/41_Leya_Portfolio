@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="lsBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#180c10" />
+      <stop offset="100%" stop-color="#241419" />
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444" />
+      <stop offset="100%" stop-color="#be123c" />
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+  </defs>
+
+  <!-- Container -->
+  <rect width="600" height="360" rx="12" fill="url(#lsBg)"/>
+
+  <!-- Window Header Bar -->
+  <rect width="600" height="38" rx="12" fill="#0f0709"/>
+  <rect y="26" width="600" height="12" fill="#0f0709"/>
+  <circle cx="24" cy="19" r="6" fill="#ef4444"/>
+  <circle cx="44" cy="19" r="6" fill="#f59e0b"/>
+  <circle cx="64" cy="19" r="6" fill="#10b981"/>
+  <text x="110" y="24" font-family="'JetBrains Mono', monospace" font-size="11" fill="#fca5a5">LifeStream · MERN Healthcare &amp; Emergency Blood Telemetry Dashboard</text>
+
+  <!-- Top Stat Cards -->
+  <rect x="24" y="54" width="168" height="74" rx="8" fill="#2d151c" stroke="#4c1d28" stroke-width="1"/>
+  <text x="38" y="76" font-family="'Inter', sans-serif" font-size="11" fill="#fda4af">Active Donors (GPS)</text>
+  <text x="38" y="106" font-family="'Inter', sans-serif" font-size="22" font-weight="bold" fill="#ffffff">1,420 <tspan font-size="12" font-weight="normal" fill="#10b981">Online ●</tspan></text>
+
+  <rect x="216" y="54" width="168" height="74" rx="8" fill="#2d151c" stroke="#4c1d28" stroke-width="1"/>
+  <text x="230" y="76" font-family="'Inter', sans-serif" font-size="11" fill="#fda4af">Blood Stock Reserves</text>
+  <text x="230" y="106" font-family="'Inter', sans-serif" font-size="22" font-weight="bold" fill="#ef4444">98.5% <tspan font-size="12" font-weight="normal" fill="#fca5a5">Stable</tspan></text>
+
+  <rect x="408" y="54" width="168" height="74" rx="8" fill="#2d151c" stroke="#4c1d28" stroke-width="1"/>
+  <text x="422" y="76" font-family="'Inter', sans-serif" font-size="11" fill="#fda4af">User Satisfaction</text>
+  <text x="422" y="106" font-family="'Inter', sans-serif" font-size="22" font-weight="bold" fill="#ffffff">4.92 ★ <tspan font-size="12" font-weight="normal" fill="#fda4af">(Reviews)</tspan></text>
+
+  <!-- Left: GPS Map Simulation -->
+  <rect x="24" y="146" width="340" height="188" rx="8" fill="#1c0f14" stroke="#4c1d28" stroke-width="1"/>
+  <text x="40" y="172" font-family="'Inter', sans-serif" font-size="12" font-weight="bold" fill="#fecdd3">Real-Time Geolocation &amp; Eligibility Map</text>
+
+  <!-- Simulated City Grid Lines -->
+  <path d="M40 210 H344 M40 255 H344 M40 295 H344 M120 180 V320 M200 180 V320 M280 180 V320" stroke="#371822" stroke-width="1.5"/>
+
+  <!-- GPS Map Pins -->
+  <g transform="translate(140, 220)">
+    <circle cx="0" cy="0" r="14" fill="rgba(239, 68, 68, 0.25)"/>
+    <circle cx="0" cy="0" r="6" fill="#ef4444"/>
+    <text x="12" y="4" font-family="'Inter', sans-serif" font-size="10" font-weight="bold" fill="#ffffff">Hospital A (O+)</text>
+  </g>
+
+  <g transform="translate(240, 265)">
+    <circle cx="0" cy="0" r="14" fill="rgba(16, 185, 129, 0.25)"/>
+    <circle cx="0" cy="0" r="6" fill="#10b981"/>
+    <text x="12" y="4" font-family="'Inter', sans-serif" font-size="10" font-weight="bold" fill="#ffffff">Eligible Donor (A-)</text>
+  </g>
+
+  <g transform="translate(180, 290)">
+    <circle cx="0" cy="0" r="14" fill="rgba(56, 189, 248, 0.25)"/>
+    <circle cx="0" cy="0" r="6" fill="#38bdf8"/>
+    <text x="12" y="4" font-family="'Inter', sans-serif" font-size="10" font-weight="bold" fill="#ffffff">Blood Bank Center</text>
+  </g>
+
+  <!-- Right: Stock Levels by Blood Group -->
+  <rect x="388" y="146" width="188" height="188" rx="8" fill="#1c0f14" stroke="#4c1d28" stroke-width="1"/>
+  <text x="404" y="172" font-family="'Inter', sans-serif" font-size="12" font-weight="bold" fill="#fecdd3">Stock Tracking System</text>
+
+  <!-- Blood Type Stock Bars -->
+  <text x="404" y="200" font-family="'JetBrains Mono', monospace" font-size="11" fill="#ffffff">O Positive (O+)</text>
+  <rect x="404" y="206" width="156" height="8" rx="3" fill="#371822"/>
+  <rect x="404" y="206" width="138" height="8" rx="3" fill="url(#redGrad)"/>
+
+  <text x="404" y="232" font-family="'JetBrains Mono', monospace" font-size="11" fill="#ffffff">A Positive (A+)</text>
+  <rect x="404" y="238" width="156" height="8" rx="3" fill="#371822"/>
+  <rect x="404" y="238" width="112" height="8" rx="3" fill="url(#redGrad)"/>
+
+  <text x="404" y="264" font-family="'JetBrains Mono', monospace" font-size="11" fill="#ffffff">B Positive (B+)</text>
+  <rect x="404" y="270" width="156" height="8" rx="3" fill="#371822"/>
+  <rect x="404" y="270" width="94" height="8" rx="3" fill="url(#redGrad)"/>
+
+  <text x="404" y="296" font-family="'JetBrains Mono', monospace" font-size="11" fill="#ffffff">AB Negative (AB-)</text>
+  <rect x="404" y="302" width="156" height="8" rx="3" fill="#371822"/>
+  <rect x="404" y="302" width="58" height="8" rx="3" fill="#f59e0b"/>
+
+  <text x="404" y="324" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#10b981">✓ REST API &amp; JWT Protected</text>
+</svg>
