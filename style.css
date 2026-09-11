@@ -1,18 +1,10 @@
-/* ==========================================================================
-   PORTFOLIO STYLESHEET (CSS3)
-   Meets Criteria: A9 (Flexbox, Grid, box-sizing, positioning, shadows, typography)
-   and A10 (Responsive Media Queries for Mobile, Tablet, Desktop)
-   ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   1. CSS Custom Properties / Design Tokens (Theming System)
-   -------------------------------------------------------------------------- */
 :root {
-  /* Fonts */
+
   --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', Menlo, monospace;
 
-  /* Spacing Scale */
+
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
   --space-md: 1rem;
@@ -21,7 +13,7 @@
   --space-2xl: 3rem;
   --space-3xl: 4.5rem;
 
-  /* Transitions & Shadows */
+ 
   --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-bounce: 350ms cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -30,12 +22,12 @@
   --radius-lg: 16px;
   --radius-pill: 9999px;
 
-  /* Container */
+
   --max-width: 1200px;
   --header-height: 72px;
 }
 
-/* Dark Theme (Default) */
+
 [data-theme="dark"] {
   --bg-body: #0b0f19;
   --bg-surface: #111827;
@@ -67,7 +59,7 @@
   --shadow-hover: 0 18px 36px -10px rgba(56, 189, 248, 0.25);
 }
 
-/* Light Theme */
+
 [data-theme="light"] {
   --bg-body: #f8fafc;
   --bg-surface: #ffffff;
@@ -99,9 +91,7 @@
   --shadow-hover: 0 18px 36px -8px rgba(2, 132, 199, 0.2);
 }
 
-/* --------------------------------------------------------------------------
-   2. Reset & Box Model (Requirement A9)
-   -------------------------------------------------------------------------- */
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -124,7 +114,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Lock scrolling when mobile menu open */
+
 body.nav-lock-scroll,
 body.modal-open-scroll {
   overflow: hidden;
@@ -157,9 +147,7 @@ button {
   background: transparent;
 }
 
-/* --------------------------------------------------------------------------
-   3. Base Layout & Containers
-   -------------------------------------------------------------------------- */
+
 .container {
   width: 100%;
   max-width: var(--max-width);
@@ -208,9 +196,7 @@ section {
   margin: var(--space-sm) auto 0;
 }
 
-/* --------------------------------------------------------------------------
-   4. Header & Navigation (A1, A2, A9 - Sticky Navbar & Flexbox)
-   -------------------------------------------------------------------------- */
+
 .site-header {
   position: sticky;
   top: 0;
@@ -230,7 +216,7 @@ section {
   height: 100%;
 }
 
-/* Brand Logo */
+
 .brand-logo {
   display: flex;
   align-items: center;
@@ -278,14 +264,13 @@ section {
   background: var(--primary-light);
 }
 
-/* Header Action Controls */
+
 .header-actions {
   display: flex;
   align-items: center;
   gap: var(--space-sm);
 }
 
-/* Theme Toggle Button */
 .btn-theme-toggle {
   display: flex;
   align-items: center;
@@ -306,7 +291,7 @@ section {
   box-shadow: var(--shadow-sm);
 }
 
-/* Mobile Hamburger Toggle */
+
 .btn-mobile-menu {
   display: none;
   font-size: 1.5rem;
@@ -315,9 +300,7 @@ section {
   border-radius: var(--radius-sm);
 }
 
-/* --------------------------------------------------------------------------
-   5. Banner / Hero Section (A1, A8, A9)
-   -------------------------------------------------------------------------- */
+
 .hero-section {
   padding-top: calc(var(--space-2xl) + 1rem);
   padding-bottom: var(--space-3xl);
@@ -445,9 +428,7 @@ section {
   background: var(--bg-surface);
 }
 
-/* --------------------------------------------------------------------------
-   6. Buttons & UI Elements
-   -------------------------------------------------------------------------- */
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -523,9 +504,7 @@ section {
   border-color: var(--primary-color);
 }
 
-/* --------------------------------------------------------------------------
-   7. About Me Section (A2, A3 - with Aside & Article)
-   -------------------------------------------------------------------------- */
+
 .about-grid {
   display: grid;
   grid-template-columns: 1.4fr 0.8fr;
@@ -573,7 +552,7 @@ section {
   color: var(--text-muted);
 }
 
-/* Aside: Quick Facts Sidebar (A2 Semantic <aside>) */
+
 .about-aside-sidebar {
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
@@ -625,9 +604,7 @@ section {
   color: var(--text-primary);
 }
 
-/* --------------------------------------------------------------------------
-   8. Skills Section (A3, A4 - dl, ul, ol Lists)
-   -------------------------------------------------------------------------- */
+
 .skills-layout-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -662,7 +639,7 @@ section {
   color: var(--text-muted);
 }
 
-/* A4: Description List (<dl>) for Skill-Proficiency Pairs */
+
 .proficiency-dl {
   display: flex;
   flex-direction: column;
@@ -700,7 +677,7 @@ section {
   line-height: 1.5;
 }
 
-/* A4: Unordered List (<ul>) for Developer Tools */
+
 .tools-ul {
   list-style: none;
   display: grid;
@@ -727,7 +704,7 @@ section {
   transform: translateY(-2px);
 }
 
-/* A4: Ordered List (<ol>) for Engineering Learning Path */
+
 .learning-ol {
   list-style-position: inside;
   display: flex;
@@ -773,9 +750,7 @@ section {
   color: var(--text-secondary);
 }
 
-/* --------------------------------------------------------------------------
-   9. Projects Section (A3, A6, B1, B2 - Dynamic Cards & Grid)
-   -------------------------------------------------------------------------- */
+
 .projects-controls {
   display: flex;
   flex-wrap: wrap;
@@ -844,7 +819,7 @@ section {
   color: var(--text-muted);
 }
 
-/* Dynamic Projects CSS Grid */
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
@@ -903,7 +878,7 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-/* Favorite Star Button (B4) */
+
 .btn-favorite {
   position: absolute;
   top: 12px;
@@ -1007,7 +982,7 @@ section {
   gap: 0.4rem;
 }
 
-/* Projects Empty State */
+
 .projects-empty-state {
   grid-column: 1 / -1;
   text-align: center;
@@ -1033,9 +1008,7 @@ section {
   margin: 0 auto var(--space-lg);
 }
 
-/* --------------------------------------------------------------------------
-   10. Internship & Education Tables (A3, A5 - Semantic <table>)
-   -------------------------------------------------------------------------- */
+
 .history-tables-wrapper {
   display: flex;
   flex-direction: column;
@@ -1075,7 +1048,7 @@ section {
   border: 1px solid var(--border-color);
 }
 
-/* Semantic Table Styling (A5) */
+
 .history-table {
   width: 100%;
   border-collapse: collapse;
@@ -1150,9 +1123,7 @@ section {
   white-space: nowrap;
 }
 
-/* --------------------------------------------------------------------------
-   11. Contact Section & Form (A7, B3 - regex validation, inline feedback)
-   -------------------------------------------------------------------------- */
+
 .contact-grid {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
@@ -1222,7 +1193,7 @@ section {
   margin-bottom: var(--space-md);
 }
 
-/* Resume Showcase Card (Replacing Direct Message Form per user request) */
+
 .resume-showcase-card {
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
@@ -1249,7 +1220,7 @@ section {
   background: #ffffff;
 }
 
-/* Contact Form (B3) */
+
 .contact-form-card {
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
@@ -1336,9 +1307,7 @@ section {
   border: 0;
 }
 
-/* --------------------------------------------------------------------------
-   12. Project Details Modal / Lightbox (B2)
-   -------------------------------------------------------------------------- */
+
 .project-modal {
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
@@ -1486,9 +1455,7 @@ section {
   gap: var(--space-sm);
 }
 
-/* --------------------------------------------------------------------------
-   13. Fixed Scroll-to-Top Button (A9 Positioning)
-   -------------------------------------------------------------------------- */
+
 .btn-scroll-top {
   position: fixed;
   bottom: 2rem;
@@ -1523,9 +1490,7 @@ section {
   box-shadow: 0 10px 24px rgba(56, 189, 248, 0.4);
 }
 
-/* --------------------------------------------------------------------------
-   14. Footer (A2 Semantic <footer>)
-   -------------------------------------------------------------------------- */
+
 .site-footer {
   background: var(--bg-surface);
   border-top: 1px solid var(--border-color);
@@ -1571,10 +1536,7 @@ section {
   color: var(--text-muted);
 }
 
-/* --------------------------------------------------------------------------
-   15. Responsive Media Queries (Requirement A10)
-   -------------------------------------------------------------------------- */
-/* Tablet Breakpoint (<= 1024px) */
+
 @media (max-width: 1024px) {
   .hero-grid {
     grid-template-columns: 1fr;
@@ -1680,7 +1642,7 @@ section {
   }
 }
 
-/* Small Devices (<= 480px) */
+
 @media (max-width: 480px) {
   .hero-cta-group {
     flex-direction: column;
