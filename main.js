@@ -1,21 +1,15 @@
-/**
- * main.js
- * Portfolio Application Controller
- * Satisfies Requirements: B1, B2, B4, B5
- */
+
 
 document.addEventListener("DOMContentLoaded", () => {
   "use strict";
 
-  // ==========================================
-  // 1. STATE & STORAGE MANAGEMENT (B4, B5)
-  // ==========================================
+
   const STORAGE_KEYS = {
     THEME: "portfolio_theme",
     FAVORITES: "portfolio_favorites"
   };
 
-  // State object
+
   const state = {
     theme: localStorage.getItem(STORAGE_KEYS.THEME) || "dark",
     favorites: JSON.parse(localStorage.getItem(STORAGE_KEYS.FAVORITES) || "[]"),
@@ -24,19 +18,17 @@ document.addEventListener("DOMContentLoaded", () => {
     projects: window.projectsData || []
   };
 
-  // Save favorites helper (B4)
+  
   const persistFavorites = () => {
     localStorage.setItem(STORAGE_KEYS.FAVORITES, JSON.stringify(state.favorites));
   };
 
-  // Save theme helper (B4)
+  
   const persistTheme = (theme) => {
     localStorage.setItem(STORAGE_KEYS.THEME, theme);
   };
 
-  // ==========================================
-  // 2. THEME SWITCHER (B2, B4)
-  // ==========================================
+ 
   const themeToggleBtn = document.getElementById("theme-toggle");
   const themeIcon = document.getElementById("theme-icon");
   const themeText = document.getElementById("theme-text");
@@ -57,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // Initialize theme from storage or system preference
+
   const systemPrefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
   const initialTheme = localStorage.getItem(STORAGE_KEYS.THEME) || (systemPrefersDark ? "dark" : "light");
   applyTheme(initialTheme);
@@ -69,9 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ==========================================
-  // 3. MOBILE NAVIGATION DRAWER (B2)
-  // ==========================================
+ 
   const mobileMenuBtn = document.getElementById("mobile-menu-btn");
   const primaryNav = document.getElementById("primary-nav");
   const navLinks = document.querySelectorAll(".nav-link");
@@ -87,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
     primaryNav.classList.toggle("nav-open", targetState);
     document.body.classList.toggle("nav-lock-scroll", targetState);
 
-    // Update hamburger icon
+   
     const hamburgerIcon = mobileMenuBtn.querySelector(".hamburger-icon");
     if (hamburgerIcon) {
       hamburgerIcon.textContent = targetState ? "✕" : "☰";
@@ -97,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (mobileMenuBtn && primaryNav) {
     mobileMenuBtn.addEventListener("click", () => toggleMobileNav());
 
-    // Close menu when clicking outside or navigating
+   
     navLinks.forEach((link) => {
       link.addEventListener("click", () => {
         if (primaryNav.classList.contains("nav-open")) {
@@ -113,9 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ==========================================
-  // 4. SCROLL-TO-TOP BUTTON (A9, B2)
-  // ==========================================
+  
   const scrollTopBtn = document.getElementById("scroll-top-btn");
 
   const handleScrollDepth = () => {
@@ -138,14 +126,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ==========================================
-  // 5. DYNAMIC PROJECTS RENDERING (B1, B5)
-  // ==========================================
+
   const projectsGrid = document.getElementById("projects-grid");
   const projectCountSpan = document.getElementById("projects-count");
   const favoritesCountSpan = document.getElementById("favorites-count");
 
-  // Favorite toggle handler
+  
   const toggleFavorite = (projectId, starBtn) => {
     const isFav = state.favorites.includes(projectId);
     if (isFav) {
@@ -156,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
     persistFavorites();
     updateFavoriteCounters();
 
-    // Re-render or update card visual
+    
     if (state.showOnlyFavorites) {
       renderProjects();
     } else if (starBtn) {
@@ -174,11 +160,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // Render Projects Cards (NO Live Demo link per user instruction)
+  
   const renderProjects = () => {
     if (!projectsGrid) return;
 
-    // Filter projects using ES6 array methods
+   
     let filteredList = state.projects;
 
     if (state.activeFilter !== "all") {
@@ -197,7 +183,7 @@ document.addEventListener("DOMContentLoaded", () => {
       projectCountSpan.textContent = `Showing ${filteredList.length} of ${state.projects.length} projects`;
     }
 
-    // Handle empty state gracefully
+    
     if (filteredList.length === 0) {
       projectsGrid.innerHTML = `
         <article class="projects-empty-state">
@@ -222,7 +208,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // Build project card markup using Array.prototype.map (B1, B5)
+   
     projectsGrid.innerHTML = filteredList
       .map((project) => {
         const { id, title, categoryLabel, duration, shortDescription, image, technologies, repoUrl, stats } = project;
@@ -296,8 +282,7 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .join("");
 
-    // Attach Event Listeners to Dynamically Generated Elements
-    // 1. Favorite buttons
+  
     const favButtons = projectsGrid.querySelectorAll(".btn-favorite");
     favButtons.forEach((btn) => {
       btn.addEventListener("click", (e) => {
@@ -307,7 +292,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    // 2. Open Details Modal buttons
+   
     const modalButtons = projectsGrid.querySelectorAll(".open-modal-btn");
     modalButtons.forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -317,9 +302,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  // ==========================================
-  // 6. FILTERING LOGIC (B2)
-  // ==========================================
+  
   const filterButtons = document.querySelectorAll(".filter-btn");
   const favFilterToggle = document.getElementById("filter-fav-toggle");
 
@@ -355,9 +338,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ==========================================
-  // 7. PROJECT DETAILS MODAL / LIGHTBOX (B2)
-  // ==========================================
+ 
   const modal = document.getElementById("project-modal");
   const modalBackdrop = document.getElementById("modal-backdrop");
   const modalCloseBtn = document.getElementById("modal-close-btn");
@@ -423,7 +404,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     `;
 
-    // Open native dialog or display modal
+    
     if (typeof modal.showModal === "function") {
       modal.showModal();
     } else {
@@ -453,7 +434,7 @@ document.addEventListener("DOMContentLoaded", () => {
     modalBackdrop.addEventListener("click", closeProjectModal);
   }
 
-  // Close dialog on native escape key or backdrop click
+  
   if (modal) {
     modal.addEventListener("cancel", closeProjectModal);
     modal.addEventListener("click", (e) => {
@@ -470,10 +451,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ==========================================
-  // 8. OPTIONAL REGEX CONTACT FORM CONTROLLER (B3, B5)
-  // Safely guarded if present
-  // ==========================================
+  
   const contactForm = document.getElementById("contact-form");
   if (contactForm) {
     const formSuccessAlert = document.getElementById("form-success-alert");
@@ -618,9 +596,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ==========================================
-  // 9. INITIALIZE APPLICATION (B1, B4)
-  // ==========================================
+  
   updateFavoriteCounters();
   renderProjects();
 });
