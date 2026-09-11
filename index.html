@@ -7,27 +7,20 @@
   <meta name="author" content="Leya Felix" />
   <title>Leya Felix | Computer Science &amp; Software Developer Portfolio</title>
 
-  <!-- Google Fonts: Inter & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
-  <!-- Main Stylesheet (A9, A10) -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-
-  <!-- ========================================================================
-       A1, A2: HEADER & NAVIGATION (<header>, <nav>)
-       ======================================================================== -->
   <header class="site-header" id="site-header">
     <div class="container header-inner">
-      <!-- Name & Brand Logo -->
+     
       <a href="#hero" class="brand-logo" aria-label="Leya Felix Portfolio Home">
         <span class="logo-accent">&lt;</span>Leya<span class="logo-dot">.dev</span><span class="logo-accent">/&gt;</span>
       </a>
 
-      <!-- Primary Navigation Menu (A1, A2) -->
+      
       <nav class="primary-nav" id="primary-nav" aria-label="Main Navigation">
         <ul class="nav-menu">
           <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
@@ -38,9 +31,9 @@
         </ul>
       </nav>
 
-      <!-- Action Controls: Theme Toggle & Mobile Menu -->
+      
       <div class="header-actions">
-        <!-- B2, B4: Dark/Light Mode Switcher -->
+       
         <button 
           type="button" 
           id="theme-toggle" 
@@ -51,7 +44,7 @@
           <span id="theme-text">Light Mode</span>
         </button>
 
-        <!-- B2: Mobile Hamburger Navigation Toggle -->
+       
         <button 
           type="button" 
           id="mobile-menu-btn" 
@@ -66,17 +59,13 @@
     </div>
   </header>
 
-  <!-- ========================================================================
-       MAIN CONTENT CONTAINER (<main>)
-       ======================================================================== -->
+ 
   <main id="main-content">
 
-    <!-- ======================================================================
-         A1, A8: HERO / BANNER SECTION (<section>)
-         ====================================================================== -->
+   
     <section class="hero-section" id="hero" aria-label="Introduction Banner">
       <div class="container hero-grid">
-        <!-- Hero Text & CTAs -->
+        
         <div class="hero-content">
           <div class="hero-status-pill">
             <span class="status-dot"></span>
@@ -91,7 +80,7 @@
             Hi, I’m <strong>Leya Felix</strong> — a Computer Science undergraduate with hands-on experience in full-stack development, machine learning, and database-driven applications. Eager to bring technical curiosity and problem-solving to high-impact software teams.
           </p>
 
-          <!-- Call-to-action buttons (A6 internal links) -->
+         
           <div class="hero-cta-group">
             <a href="#projects" class="btn btn-primary">
               Explore Projects 🚀
@@ -104,7 +93,7 @@
             </a>
           </div>
 
-          <!-- A8: Audio Introduction Greeting -->
+          
           <aside class="hero-audio-widget" aria-label="Audio Welcome Greeting">
             <span class="audio-widget-label">
               <span>🔊</span> <strong>Audio Welcome Chime:</strong>
@@ -116,7 +105,7 @@
           </aside>
         </div>
 
-        <!-- Hero Avatar Visual (A8 Embedded Image) -->
+        
         <div class="hero-visual">
           <div class="avatar-wrapper">
             <img 
@@ -132,9 +121,7 @@
       </div>
     </section>
 
-    <!-- ======================================================================
-         A2, A3: ABOUT ME SECTION (<section>, <article>, <aside>)
-         ====================================================================== -->
+    
     <section class="about-section" id="about" aria-labelledby="about-title">
       <div class="container">
         <header class="section-header">
@@ -144,7 +131,7 @@
         </header>
 
         <div class="about-grid">
-          <!-- Main Narrative Article (A2) -->
+         
           <article class="about-main-card">
             <p class="about-paragraph">
               I am a Computer Science undergraduate at <strong>Mar Baselios College of Engineering and Technology, Thiruvananthapuram</strong> (maintaining a <strong>9.24 CGPA</strong>). My technical background centers on building real-world software applications, ranging from machine learning pipelines for medical diagnosis to scalable full-stack MERN platforms and enterprise database applications.
@@ -172,7 +159,7 @@
             </div>
           </article>
 
-          <!-- Aside Quick Facts (A2 Semantic <aside>) -->
+          
           <aside class="about-aside-sidebar" aria-label="Quick Highlights">
             <h3 class="sidebar-heading"><span>⚡</span> Quick Facts</h3>
             <ul class="quick-facts-list">
@@ -224,9 +211,7 @@
       </div>
     </section>
 
-    <!-- ======================================================================
-         A3, A4: SKILLS SECTION (dl, ul, ol Lists)
-         ====================================================================== -->
+    
     <section class="skills-section" id="skills" aria-labelledby="skills-title">
       <div class="container">
         <header class="section-header">
@@ -236,7 +221,7 @@
         </header>
 
         <div class="skills-layout-grid">
-          <!-- A4: Description List (<dl>) for Technical Skills (Exact Resume Data) -->
+          
           <article class="skills-card">
             <header class="skills-card-header">
               <h3 class="skills-card-title"><span>💻</span> Technical Skills</h3>
@@ -274,7 +259,7 @@
             </dl>
           </article>
 
-          <!-- A4: Unordered List (<ul>) for Academic Coursework (Exact Resume Data) -->
+         
           <article class="skills-card">
             <header class="skills-card-header">
               <h3 class="skills-card-title"><span>📚</span> Core Computer Science Courses</h3>
@@ -312,9 +297,7 @@
       </div>
     </section>
 
-    <!-- ======================================================================
-         A3, A6, B1, B2, B4: PROJECTS SECTION (Dynamic Cards Rendered via JS)
-         ====================================================================== -->
+  
     <section class="projects-section" id="projects" aria-labelledby="projects-title">
       <div class="container">
         <header class="section-header">
@@ -323,7 +306,7 @@
           <p class="section-subtitle">Dynamic project cards rendered via JavaScript from Leya's resume with category filtering and modal specs.</p>
         </header>
 
-        <!-- B2: Interactive Filter Controls -->
+        
         <div class="projects-controls">
           <div class="filter-btn-group" role="tablist" aria-label="Filter projects by technology category">
             <button type="button" class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Projects</button>
@@ -333,7 +316,7 @@
             <button type="button" class="filter-btn" data-filter="accessibility" role="tab" aria-selected="false">Accessibility &amp; Mobile</button>
           </div>
 
-          <!-- B4: Persistent LocalStorage Favorites Filter -->
+          
           <button 
             type="button" 
             id="filter-fav-toggle" 
@@ -359,9 +342,7 @@
       </div>
     </section>
 
-    <!-- ======================================================================
-         A3, A5: INTERNSHIP & EDUCATION SECTION (Tabular Format <table>)
-         ====================================================================== -->
+   
     <section class="experience-section" id="experience" aria-labelledby="exp-title">
       <div class="container">
         <header class="section-header">
@@ -408,7 +389,7 @@
             </div>
           </article>
 
-          <!-- A5: Education Table (Semantic <table>) -->
+          
           <article class="table-card">
             <header class="table-card-header">
               <h3 class="table-card-title"><span>🎓</span> Academic Qualifications</h3>
@@ -468,7 +449,7 @@
             </div>
           </article>
 
-          <!-- Certifications & Hackathons Card -->
+         
           <article class="table-card">
             <header class="table-card-header">
               <h3 class="table-card-title"><span>🏆</span> Certifications &amp; Hackathons</h3>
@@ -498,9 +479,7 @@
       </div>
     </section>
 
-    <!-- ======================================================================
-         A3, A7, B3: CONTACT SECTION & FORM
-         ====================================================================== -->
+    
     <section class="contact-section" id="contact" aria-labelledby="contact-title">
       <div class="container">
         <header class="section-header">
@@ -510,7 +489,7 @@
         </header>
 
         <div class="contact-grid">
-          <!-- A7: Direct Contact Info Card (mailto, tel, downloadable resume) -->
+          
           <article class="contact-info-card">
             <h3 class="sidebar-heading"><span>📫</span> Direct Reach</h3>
             <p class="about-paragraph">
@@ -527,7 +506,7 @@
                 </div>
               </a>
 
-              <!-- A7: Working tel: link -->
+              
               <a href="tel:+917559022815" class="contact-link-item" title="Call Leya Felix">
                 <span class="contact-item-icon" aria-hidden="true">📞</span>
                 <div>
@@ -536,7 +515,7 @@
                 </div>
               </a>
 
-              <!-- LinkedIn Link -->
+              
               <a href="https://www.linkedin.com/in/leya-felix-19034124a/" target="_blank" rel="noopener noreferrer" class="contact-link-item" title="Visit Leya Felix on LinkedIn">
                 <span class="contact-item-icon" aria-hidden="true">💼</span>
                 <div>
@@ -545,7 +524,7 @@
                 </div>
               </a>
 
-              <!-- Location Info -->
+              
               <div class="contact-link-item">
                 <span class="contact-item-icon" aria-hidden="true">📍</span>
                 <div>
@@ -555,7 +534,7 @@
               </div>
             </div>
 
-            <!-- A7: Downloadable Resume Link -->
+            
             <div class="resume-download-card">
               <h4 class="resume-download-title">Verified Curriculum Vitae</h4>
               <p class="resume-download-desc">Official PDF resume detailing academic achievements, internship at Oil Fields Supply Center, and project metrics.</p>
@@ -570,7 +549,7 @@
             </div>
           </article>
 
-          <!-- Resume / Curriculum Vitae Showcase Card (Replacing form per user request) -->
+          
           <article class="resume-showcase-card">
             <h3 class="sidebar-heading"><span>📄</span> Curriculum Vitae (Resume)</h3>
             <p class="about-paragraph">
@@ -597,7 +576,7 @@
               </a>
             </div>
 
-            <!-- Embedded PDF Document Viewer -->
+            
             <iframe 
               src="assets/docs/resume.pdf" 
               class="resume-embed-frame" 
@@ -610,9 +589,7 @@
 
   </main>
 
-  <!-- ========================================================================
-       A2: FOOTER (<footer>)
-       ======================================================================== -->
+ 
   <footer class="site-footer" id="site-footer">
     <div class="container footer-inner">
       <!-- External Links (A6) -->
@@ -632,9 +609,7 @@
     </div>
   </footer>
 
-  <!-- ========================================================================
-       B2: PROJECT DETAILS MODAL / LIGHTBOX (<dialog>)
-       ======================================================================== -->
+  
   <dialog id="project-modal" class="project-modal" aria-labelledby="modal-title">
     <div class="modal-header-bar">
       <button type="button" id="modal-close-btn" class="modal-close-btn" aria-label="Close project details dialog">✕</button>
@@ -645,9 +620,7 @@
   </dialog>
   <div id="modal-backdrop" class="modal-backdrop-fallback"></div>
 
-  <!-- ========================================================================
-       A9, B2: FIXED SCROLL-TO-TOP BUTTON
-       ======================================================================== -->
+  
   <button 
     type="button" 
     id="scroll-top-btn" 
@@ -658,9 +631,7 @@
     ↑
   </button>
 
-  <!-- ========================================================================
-       SCRIPTS (B1, B5)
-       ======================================================================== -->
+ 
   <script src="js/projects-data.js"></script>
   <script src="js/main.js"></script>
 </body>
