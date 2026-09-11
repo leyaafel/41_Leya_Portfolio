@@ -1,8 +1,4 @@
-/**
- * projects-data.js
- * Source data for dynamic project card rendering and modal details (Requirement B1 & B5).
- * Real projects from Leya Felix's resume.
- */
+
 
 const projectsData = [
   {
